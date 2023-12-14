@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links Personalizados com Pseudo-classes</title>
+    <style>
+    a{
+     color: red;
+     text-decoration: none;
+    }
+    a:visited{
+        color: brown;
+        text-decoration: underline;
+    }
+    a:active{
+        color:darkred;
+
+    }
+    a:hover{
+        text-decoration: underline;
+        color: darkgreen;
+    }
+    a::after{
+        content: ' <';
+    }
+    a::before{
+        content: '> ';
+    }
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="https://gustavoguanabara.github.io">Repositório do GitHub</a></li>
+        <li><a href="https://youtube.com/cursoemvideo/">Canal no Youtube</a></li>
+        <li><a href="https://cursoemvideo.com">Site do Curso Em Vídeo</a></li>
+    </ul>
+</body>
+</html>

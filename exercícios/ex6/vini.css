@@ -1,0 +1,7 @@
+title{
+    font: italic;
+}
+table th td tr{
+    border: 3px;
+    border-color: black;
+}

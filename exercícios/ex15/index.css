@@ -1,0 +1,19 @@
+body{
+    background-color: sandybrown;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+h1{
+    color: darkblue;
+    background-color: lightblue;
+    border: solid blue;
+    width: 200px;
+}
+h2{
+    color: red;
+    width: 170px;
+}
+p{
+    color: white;
+    text-align: justify;
+}
