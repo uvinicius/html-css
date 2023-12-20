@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframes</title>
+    <style>
+        iframe{
+            border: 1px solid black;
+            width: 95vw;
+            height: 600px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça uma escolha</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque cumque dolore ad, corporis quas blanditiis nobis minima explicabo magni adipisci dolor. Rem placeat praesentium aperiam molestiae obcaecati, consectetur iure et.</p>
+
+    <ul>
+        <li><a href="paginas/pag001.html" target="frame">Primeira página</a></li>
+        <li><a href="paginas/pag002.html" target="frame">Segunda página</a></li>
+        <li><a href="paginas/pag003.html" target="frame">Terceira página</a></li>
+    </ul>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita minima porro laboriosam provident assumenda nesciunt nam iste animi qui libero vel, sint eum. Aspernatur et animi ad esse iste aperiam.</p>
+
+    <iframe id="tela" name="frame"
+    srcdoc="<h1>Escolha uma das opções acima</h1> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda aut nemo deleniti recusandae, laborum, animi fuga rerum est, distinctio eligendi quae molestias voluptate molestiae placeat nihil labore. Laborum, officia repudiandae.
+    ""></iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eveniet fugit iste at! Quod pariatur sapiente repudiandae optio, autem fugit consectetur odit tempore molestiae laudantium exercitationem nulla impedit architecto nisi!</p>
+</body>
+</html>
