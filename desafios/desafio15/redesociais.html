@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Redes Sociais</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <style>
+        @charset "UTF-8";
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
         body{
             background-image: url(imagens/fundo-madeira.jpg);
             background-size: cover;
@@ -13,11 +20,11 @@
         }
         iframe{
             border-radius: 10px;
-            width: 343px;
+            width: 345px;
             height: 612px;
             position: absolute;
             top: 50.5%;
-            left: 50.5%;
+            left: 50%;
             transform: translate(-50%,-50%);
         }
         button{
@@ -25,12 +32,14 @@
             width: 60px;
             height: 60px;
             margin-bottom: 25px;
+            margin-right: 20px;
             border: 0px;
-            box-shadow: 2px 2px 15px 1px;;
+            box-shadow: 2px 2px 15px 1px;
+            
         }
         a button:hover{
             border: 1px white solid;
-            transition-duration: 1s;
+            transition-duration: 1s;transform: translate(-3px, -3px);
         }
         .right{
             text-align: right;
@@ -50,38 +59,38 @@
 </head>
 <body>
     <div class="right">
-        <a href="imagens/tela-home.jpg" target="frame">
+        <a href="paginas/home.html" target="frame">
             <button style="background-image: url(imagens/logo-home.jpg); background-position: center center;
             background-size: cover;"></button>
         </a>
         <br>
-        <a href="imagens/tela-youtube.png" target="frame">
+        <a href="paginas/youtube.html" target="frame">
             <button style="background-image: url(imagens/logo-youtube.jpg);background-position: center center;
             background-size: cover;"></button>
         </a>
         <br>
-        <a href="imagens/tela-github.jpg" target="frame">
+        <a href="paginas/github.html" target="frame">
             <button style="background-image: url(imagens/logo-github.jpg);background-position: center center;
             background-size: cover;"></button>
         </a>
         <br>
-        <a href="imagens/tela-instagram.jpg" target="frame">
+        <a href="paginas/instagram.html" target="frame">
             <button style="background-image: url(imagens/logo-instagram.jpg);background-position: center center;
             background-size: cover;"></button>
         </a>
         <br>
-        <a href="imagens/tela-twitter.jpg" target="frame">
+        <a href="paginas/twitter.html" target="frame">
             <button style="background-image: url(imagens/logo-twitter.jpg);background-position: center center;
             background-size: cover;"></button>
         </a>
         <br>
-        <a href="imagens/tela-facebook.jpg" target="frame">
+        <a href="paginas/facebook.html" target="frame">
             <button style="background-image: url(imagens/logo-facebook.jpg);background-position: center center;
             background-size: cover;"></button>
         </a>    
     </div>
     <div id="celular">
-        <iframe id="tela" name="frame" src="imagens/tela-home.jpg"></iframe>
+        <iframe id="tela" name="frame" src="paginas/home.html"></iframe>
     </div>
 </body>
 </html>
