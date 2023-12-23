@@ -15,11 +15,11 @@
     <form action="cadastro.php" method="get" autocomplete="on">
         <p>
             <label for="usuario">Usuário:</label> 
-            <input type="text" name="usuario" id="usuario" required>
+            <input type="text" name="usuario" id="usuario" required size="10" minlength="5" autocomplete="username">
         </p>
         <p>
             <label for="senha">Senha:</label> 
-            <input type="password" name="senha" id="senha" required>
+            <input type="password" name="senha" id="senha" required size="11" minlength="8" autocomplete="current-password">
         </p>
         <p>
             <input type="submit" value="Enviar">
