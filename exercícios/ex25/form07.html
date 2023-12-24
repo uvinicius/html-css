@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post">
+        <fieldset>
+            <legend>select, datalist e textarea</legend>
+            <p>
+                <label for="iestado">Seu estado:</label>
+                <select name="estado" id="iestado">
+                    <optgroup label="Nordeste">
+                        <option value="" selected>Escolha</option>
+                        <option value="CE">Ceará</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="PI">Piauí</option>
+                    </optgroup>
+                    <optgroup label="Sudeste">
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <label for="iprof">Sua profissão:</label>
+                <input type="text" name="prof" id="iprof" list="proflist">
+                <datalist id="proflist">
+                    <option value="ADM">Adminstrador</option>
+                    <option value="INF">Técnico de Informática</option>
+                    <option value="ENF">Enfermeiro</option>
+                </datalist>
+            </p>
+            <p>
+                <label for="imsg">Uma mensagem para mim:</label><br>
+                <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
