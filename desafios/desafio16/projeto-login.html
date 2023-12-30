@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        @charset "UTF-8";
+
+        @media all{
+            *{
+                margin: 0px;
+                padding: 0px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            body, html{
+                background-color: rgb(75, 75, 212);
+                width: 100vw;
+                height: 100vh;
+            }
+            main{
+                position: relative;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-color: white;
+                border-radius: 20px;
+                width: 275px;
+                height: 520px;
+            }
+            section{
+                border-top-right-radius: 20px;
+                border-top-left-radius: 20px;
+            }
+            section#metal{
+                background: blue url(imagens/metal.jpg) no-repeat;
+                background-size: cover;
+                background-position: left bottom;
+                height: 40%;
+            }
+            section h1{
+                padding: 10px;
+                text-align: center;
+            }
+            section p.texto{
+                font-size: small;
+                font-weight: 500;
+                font-weight: 200;
+                padding: 10px;
+                padding-top: 0px;
+                padding-bottom: 0px;
+                text-align: left;
+                margin-left: 13px;
+            }
+            p.dados{
+                background-color: blue;
+                border-radius: 10px;
+                margin: auto;
+                width: 220px;
+                padding: 10px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                height: 25px;
+            }
+            p.dados input{
+                background-color: lightblue;
+                border-radius: 10px;
+                height: 33px;
+                width: 187px;
+                position: relative;
+                left: 44%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            input#enter{
+                background-color: lightblue;
+                display: block;
+                margin: auto;
+                margin-bottom: 5px;
+                border-radius: 5px;
+                width: 240px;
+                height: 40px;
+                border: 0px;
+                color: white;
+                font-size: 1em;
+            }
+            input#enter:hover{
+                cursor: pointer;
+            }
+            button{
+                background-color: white;
+                display: block;
+                margin: auto;
+                border-radius: 5px;
+                width: 240px;
+                height: 40px;
+                border: 0px;
+                font-size: 1em;
+                border: 1px solid lightblue;
+            }
+            button:hover{
+                cursor: pointer;
+            }
+            button p{
+                position: relative;
+                left: 50%;
+                top: 27%;
+                transform: translate(-50%, -50%);
+            }
+            a{
+                text-decoration: none;
+            }
+            button i.material-symbols-outlined{
+                color: black;
+                position: relative;
+                left: 5%;
+                top: 27%;
+                transform: translate(-50%, 25%);
+            }
+            i.material-symbols-outlined{
+                color: white;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+            body{
+                background-image: linear-gradient(to top, rgb(61, 166, 201), blue);
+            }
+            main{
+                width: 700px;
+                height: 380px;
+            }
+            main section{
+                display: inline-block;
+            }
+        }
+</style>
+</head>
+<body>
+    <main>
+        <section id="metal">
+
+        </section>
+        <section>
+            <h1>Login</h1>
+            <p class="texto">Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
+            <form action="login.php" method="post">
+
+                <p class="dados">
+                    <label for="imail"> <i class="material-symbols-outlined">face</i> </label>
+                    <input type="email" name="mail" id="imail" required size="10" placeholder="  seu e-mail">
+                </p>
+
+                <p class="dados">
+                    <label for="isenha"> <i class="material-symbols-outlined">Key</i> </label>
+                    <input type="password" name="senha" id="isenha" required size="10" minlength="8" maxlength="20" placeholder="  sua senha">
+                </p>
+
+                <p>
+                    <input type="submit" value="Entrar" id="enter">
+                </p>
+                <a href="#">
+                    <button><p>Esqueci a senha <i class="material-symbols-outlined">mail</i></p> </button>
+                </a>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
