@@ -73,9 +73,24 @@
                 color: black;
             }
         }
+        
+        @media screen and (min-width: 800px) {
+            i#list{
+                display: none;
+            }
+            menu{
+                display: block;
+            }
+            menu ul li{
+                display: inline-block;
+            }
+            main{
+                max-width: 800px;
+            }
+        }
     </style>
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu site</h1>
         <i id="list" class="material-symbols-outlined" onclick="clickMenu()">lists</i>
@@ -118,6 +133,13 @@
                 itens.style.display = 'none'
             } else{
                 itens.style.display = 'block'
+            }
+        }
+        function mudouTamanho() {
+            if (window.innerWidth >= 800){
+                itens.style.display = 'block'
+            } else{
+                itens.style.display = 'none'
             }
         }
     </script>
