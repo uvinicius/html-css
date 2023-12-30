@@ -29,11 +29,13 @@
                 background-color: white;
                 border-radius: 20px;
                 width: 275px;
-                height: 520px;
+                height: 580px;
+                transition-duration: 1s;
             }
             section{
                 border-top-right-radius: 20px;
                 border-top-left-radius: 20px;
+                display: block;
             }
             section#metal{
                 background: blue url(imagens/metal.jpg) no-repeat;
@@ -46,7 +48,6 @@
                 text-align: center;
             }
             section p.texto{
-                font-size: small;
                 font-weight: 500;
                 font-weight: 200;
                 padding: 10px;
@@ -112,6 +113,7 @@
             }
             a{
                 text-decoration: none;
+                display: block;
             }
             button i.material-symbols-outlined{
                 color: black;
@@ -123,20 +125,56 @@
             i.material-symbols-outlined{
                 color: white;
             }
+            form{
+                display: block;
+            }
         }
 
-        @media screen and (min-width: 800px) {
+        @media screen and (min-width: 800px) and (max-width: 992px) {
             body{
                 background-image: linear-gradient(to top, rgb(61, 166, 201), blue);
             }
             main{
-                width: 700px;
-                height: 380px;
+                transition-duration: 1s;
+                width: 80vw;
             }
             main section{
-                display: inline-block;
+                float: right;
+                border-top-right-radius: 0px;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                width: 65%;
+            }
+            main section#metal{
+                float: left;
+                width: 35%;
+                height: 100%;
+
             }
         }
+
+        @media screen and (min-width: 992px){
+            body{
+                background-image: linear-gradient(to top, rgb(61, 166, 201), blue);
+            }
+            main{
+                transition-duration: 1s;
+                width: 950px;
+            }
+            main section{
+                float: right;
+                border-top-right-radius: 0px;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                width: 50%;
+            }
+            main section#metal{
+                float: left;
+                width: 50%;
+                height: 100%;
+
+            }
+        } 
 </style>
 </head>
 <body>
@@ -162,10 +200,15 @@
                 <p>
                     <input type="submit" value="Entrar" id="enter">
                 </p>
-                <a href="#">
-                    <button><p>Esqueci a senha <i class="material-symbols-outlined">mail</i></p> </button>
-                </a>
+                
             </form>
+            <a href="#">
+                <button>
+                    <p>
+                        Esqueci a senha <i class="material-symbols-outlined">mail</i>
+                    </p> 
+                </button>
+            </a>
         </section>
     </main>
 </body>
