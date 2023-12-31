@@ -10,7 +10,7 @@
     <style>
         @charset "UTF-8";
 
-        @media all{
+        @media all {
             *{
                 margin: 0px;
                 padding: 0px;
@@ -30,37 +30,41 @@
                 border-radius: 20px;
                 width: 275px;
                 height: 580px;
-                transition-duration: 1s;
+                box-shadow: 0px 0px 20px black;
             }
             section{
                 border-top-right-radius: 20px;
                 border-top-left-radius: 20px;
                 display: block;
+                transition: width .4s, height .4s;
+                transition-timing-function: ease;
             }
             section#metal{
                 background: blue url(imagens/metal.jpg) no-repeat;
                 background-size: cover;
                 background-position: left bottom;
                 height: 40%;
+                box-shadow: 0px 0px 20px;
             }
             section h1{
                 padding: 10px;
+                padding-bottom: 0px;
                 text-align: center;
             }
             section p.texto{
-                font-weight: 500;
-                font-weight: 200;
                 padding: 10px;
                 padding-top: 0px;
                 padding-bottom: 0px;
                 text-align: left;
                 margin-left: 13px;
+                font-size: 0.8em;
+                padding: 10px;
             }
             p.dados{
                 background-color: blue;
                 border-radius: 10px;
                 margin: auto;
-                width: 220px;
+                width: calc(100% - 40px);
                 padding: 10px;
                 margin-top: 5px;
                 margin-bottom: 5px;
@@ -70,11 +74,14 @@
                 background-color: lightblue;
                 border-radius: 10px;
                 height: 33px;
-                width: 187px;
+                width: calc(100% - 33px);
                 position: relative;
-                left: 44%;
+                left: 45%;
                 top: 50%;
-                transform: translate(-50%, -50%);
+                transform: translate(-47%, -54%);
+            }
+            p.dados input:focus-within{
+                background-color: white;
             }
             input#enter{
                 background-color: lightblue;
@@ -82,7 +89,7 @@
                 margin: auto;
                 margin-bottom: 5px;
                 border-radius: 5px;
-                width: 240px;
+                width: calc(100% - 25px);
                 height: 40px;
                 border: 0px;
                 color: white;
@@ -96,7 +103,7 @@
                 display: block;
                 margin: auto;
                 border-radius: 5px;
-                width: 240px;
+                width: calc(100% - 25px);
                 height: 40px;
                 border: 0px;
                 font-size: 1em;
@@ -104,6 +111,8 @@
             }
             button:hover{
                 cursor: pointer;
+                background-color: aliceblue;
+                color: black;
             }
             button p{
                 position: relative;
@@ -114,6 +123,7 @@
             a{
                 text-decoration: none;
                 display: block;
+                width: calc(100%);
             }
             button i.material-symbols-outlined{
                 color: black;
@@ -130,13 +140,13 @@
             }
         }
 
-        @media screen and (min-width: 800px) and (max-width: 992px) {
+        @media screen and (min-width: 800px) and (max-width: 1000px) {
             body{
                 background-image: linear-gradient(to top, rgb(61, 166, 201), blue);
             }
             main{
-                transition-duration: 1s;
                 width: 80vw;
+                height: 450px;
             }
             main section{
                 float: right;
@@ -145,34 +155,59 @@
                 border-bottom-left-radius: 20px;
                 width: 65%;
             }
+            main section#formulario{
+                position: relative;
+                top: 50%;
+                left: 33%;
+                transform: translate(-50%, -50%);
+                text-align: left;
+            }
             main section#metal{
                 float: left;
                 width: 35%;
                 height: 100%;
 
             }
+            section p.texto{
+                font-size: 1em;
+            }
         }
 
-        @media screen and (min-width: 992px){
+        @media screen and (min-width: 1000px){
             body{
                 background-image: linear-gradient(to top, rgb(61, 166, 201), blue);
             }
+            section#metal{
+                background-position: left top;
+            }
             main{
-                transition-duration: 1s;
                 width: 950px;
+                height: 450px;
             }
             main section{
-                float: right;
-                border-top-right-radius: 0px;
-                border-top-left-radius: 20px;
-                border-bottom-left-radius: 20px;
+                float: left;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
                 width: 50%;
             }
+            main section#formulario{
+                position: relative;
+                top: 50%;
+                left: 25%;
+                
+                text-align: left;
+                
+                transform: translate(-50%, -50%);
+            }
             main section#metal{
-                float: left;
+                float: right;
                 width: 50%;
                 height: 100%;
 
+            }
+            section{
+                font-size: 1.1em;
             }
         } 
 </style>
@@ -182,7 +217,7 @@
         <section id="metal">
 
         </section>
-        <section>
+        <section id="formulario">
             <h1>Login</h1>
             <p class="texto">Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
             <form action="login.php" method="post">
